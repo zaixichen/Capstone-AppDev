@@ -21,6 +21,8 @@ from app import views
 urlpatterns = [
     path('postchatt/', views.postchatt, name='postchatt'),
     path('getchatts/', views.getchatts, name='getchatts'),
+    path('getimages/', views.getimages, name='getimages'),
+    path('postimages/', views.postimages, name='postimages'),
     path('admin/', admin.site.urls),
 ]
 

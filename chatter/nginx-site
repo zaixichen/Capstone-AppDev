@@ -19,6 +19,8 @@ server {
 
     server_name 121.40.250.82;
 
+    client_max_body_size 10M;
+
     location = /favicon.ico {
         access_log off;
         log_not_found off;
@@ -26,6 +28,10 @@ server {
 
     location /static/ {
         root /root/441/chatter;
+    }
+
+    location ^~ /media {
+        alias /root/441/chatter/media;
     }
 
     location / {
